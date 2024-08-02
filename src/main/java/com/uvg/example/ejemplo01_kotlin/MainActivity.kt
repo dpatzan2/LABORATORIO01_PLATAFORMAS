@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
@@ -16,9 +18,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.uvg.example.ejemplo01_kotlin.ui.theme.Ejemplo01_kotlinTheme
 
 class MainActivity : ComponentActivity() {
@@ -71,19 +77,25 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     val shouldShowDialog = remember { mutableStateOf(false) } // 1
 
     Column (
+        verticalArrangement = Arrangement.Center,
         modifier = modifier
     ) {
         Text(
             text = "Hello $name!",
-            modifier = modifier
+            modifier = Modifier,
+            fontSize = 70.sp,
+            lineHeight = 70.sp,
+            textAlign = TextAlign.Center
         )
         Text(
             text = "No se que poner XD",
             modifier = modifier
+                .padding(horizontal = 16.dp, vertical = 8.dp)
         )
         Text(
             text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
             modifier = modifier
+                .padding(horizontal = 16.dp, vertical = 8.dp)
         )
 
         if (shouldShowDialog.value) {
@@ -93,6 +105,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         Button(
             onClick = { shouldShowDialog.value = true },
             modifier = Modifier
+                .align(Alignment.CenterHorizontally)
+                .padding(horizontal = 16.dp, vertical = 8.dp)
         ) {
             Text(text = "Show Dialog")
         }
