@@ -108,7 +108,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                 .align(Alignment.CenterHorizontally)
                 .padding(horizontal = 16.dp, vertical = 8.dp)
         ) {
-            Text(text = "Show Dialog")
+            Text(text = "Mostrar alerta")
         }
     }
 }
