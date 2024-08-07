@@ -20,3 +20,7 @@ En este apartado se encuentra el pull request requerdio para dicho laboratorio
 
 - [@dpatzan2](https://www.github.com/dpatzan2) (Diego Fernando Patzán Marroquín - 23525)
 
+## Video
+
+- [Video funcionamiento](https://drive.google.com/file/d/1XL1iqjpj0tNP8TqdusF1dJmBvkmO40Ov/view?usp=sharing)
+
